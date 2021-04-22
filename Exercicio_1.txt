@@ -1,0 +1,22 @@
+create database recursos_humanos;
+
+create table funcionarie (
+cod_fun int not null auto_increment,
+nome_fun varchar (30),
+funcao varchar (20),
+salario decimal(10,2),
+horario varchar (20),
+primary key (cod_fun)
+
+);
+
+insert into funcionarie (nome_fun, funcao, salario, horario) Values ("Adilson", "professor", "2500", "manha");
+insert into funcionarie (nome_fun, funcao, salario, horario) Values ("Aline", "administracao", "1500", "manha");
+insert into funcionarie (nome_fun, funcao, salario, horario) Values ("Francisca", "gerente", "5000", "tarde");
+insert into funcionarie (nome_fun, funcao, salario, horario) Values ("Ingrid", "dev web", "4000", "noite");
+insert into funcionarie (nome_fun, funcao, salario, horario) Values ("Jeruza", "dev web", "4000", "tarde");
+
+select * from funcionarie where salario > 2000
+select * from funcionarie where salario < 2000
+
+update funcionarie set nome_fun = "Paola" where cod_fun = 2;
